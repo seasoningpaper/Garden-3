@@ -3,97 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的小花園 - 全新實體卡片版</title>
+    <title>我的小花園</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="solid-header">
         <div class="container">
             <nav>
                 <div class="logo">我的小花園</div>
                 <ul class="nav-links">
                     <li><a href="#home">首頁</a></li>
-                    <li><a href="#about">關於花園</a></li>
+                    <li><a href="#menu">主題介紹</a></li>
                     <li><a href="#projects">作品集</a></li>
-                    <li><a href="#contact">聯絡我們</a></li>
+                    <li><a href="#gal">(Gal) 不單純的夏日</a></li>
+                    <li><a href="#more">More</a></li>
                 </ul>
+                <a href="#login" class="login-btn">Log In</a>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="hero bg-light">
-        <div class="container">
-            <div class="hero-card solid-shadow-long">
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text-card solid-card">
                 <h2>歡迎來到我的小小世界～</h2>
                 <p>這是一個網站 (笑w</p>
                 <p>點擊下方按鈕進入常用連結~</p>
-                <a href="#projects" class="btn btn-primary btn-lg">讓我們開始吧！</a>
+                <a href="#menu" class="btn">讓我們開始吧！</a>
             </div>
+            
+            <div class="hero-tools">
+                <div class="date-picker solid-card">
+                    <span class="label">TODAY:</span>
+                    <span class="date">2026/04/25</span>
+                </div>
+            </div>
+            
+            <a href="#menu" class="scroll-down">
+                <span class="arrow">v</span>
+            </a>
         </div>
     </section>
 
-    <section id="about" class="section-padding">
+    <section id="menu" class="menu-section">
         <div class="container">
             <div class="section-header text-center">
                 <h2>網站選單ヾ(≧▽≦*)o</h2>
                 <p>Website menu</p>
             </div>
             <div class="menu-container">
-                <div class="menu-item-card solid-shadow">
-                    <div class="icon theme-icon"></div>
+                <div class="menu-item-card solid-card">
+                    <div class="icon-placeholder"></div>
                     <h3>主題介紹</h3>
                 </div>
-                <div class="menu-item-card solid-shadow">
-                    <div class="icon disk-icon"></div>
+                <div class="menu-item-card solid-card">
+                    <div class="icon-placeholder"></div>
                     <h3>音樂花園</h3>
                 </div>
-                <div class="menu-item-card solid-shadow">
-                    <div class="icon camera-icon"></div>
+                <div class="menu-item-card solid-card">
+                    <div class="icon-placeholder"></div>
                     <h3>作品集</h3>
                 </div>
-                <div class="menu-item-card solid-shadow">
-                    <div class="icon gal-icon"></div>
+                <div class="menu-item-card solid-card">
+                    <div class="icon-placeholder"></div>
                     <h3>(Gal) 不單純的夏日</h3>
                 </div>
-                <div class="menu-item-card solid-shadow">
-                    <div class="icon cal-icon"></div>
+                <div class="menu-item-card solid-card">
+                    <div class="icon-placeholder"></div>
                     <h3>TR</h3>
                 </div>
-                <div class="menu-item-card solid-shadow">
-                    <div class="icon chat-icon"></div>
+                <div class="menu-item-card solid-card">
+                    <div class="icon-placeholder"></div>
                     <h3>留言小卡</h3>
                 </div>
-                <div class="menu-item-card solid-shadow">
-                    <div class="icon folder-icon"></div>
+                <div class="menu-item-card solid-card">
+                    <div class="icon-placeholder"></div>
                     <h3>小檔案</h3>
                 </div>
-                <div class="menu-item-card solid-shadow">
-                    <div class="icon book-icon"></div>
+                <div class="menu-item-card solid-card">
+                    <div class="icon-placeholder"></div>
                     <h3>關於</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>作品集展示</h2>
-                <p>這裡是我的全端專案項目</p>
-            </div>
-            <div class="project-container" id="project-list">
-                <div class="text-center w-100">作品正在加載中...</div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
+    <footer class="solid-footer">
         <div class="container text-center">
-            <p>&copy; 2021~2026 我的小花園. 此網站為非商業用途。</p>
+            <p>&copy; 2025~2026 我的小花園3. 此網站為非商業用途。</p>
             <p>為獲得最佳體驗，您的螢幕解析度需 &ge; 1600*900<br>
             系統: Chrome 70、IE10以上</p>
-            <button class="contact-floating-btn btn btn-dark">聯絡我們！</button>
+            <button class="contact-floating-btn">💬</button>
         </div>
     </footer>
 
