@@ -3,74 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的個人網站</title>
+    <title>我的小花園 - 全新實體卡片版</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">MyPortfolio</div>
-            <ul class="nav-links">
-                <li><a href="#home">首頁</a></li>
-                <li><a href="#about">關於我</a></li>
-                <li><a href="#projects">作品集</a></li>
-                <li><a href="#contact">聯絡我</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">我的小花園</div>
+                <ul class="nav-links">
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#about">關於花園</a></li>
+                    <li><a href="#projects">作品集</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>你好，我是 Web Developer</h1>
-            <p>專注於打造簡潔、實用的數位體驗</p>
-            <a href="#projects" class="btn">查看作品</a>
+    <section id="home" class="hero bg-light">
+        <div class="container">
+            <div class="hero-card solid-shadow-long">
+                <h2>歡迎來到我的小小世界～</h2>
+                <p>這是一個網站 (笑w</p>
+                <p>點擊下方按鈕進入常用連結~</p>
+                <a href="#projects" class="btn btn-primary btn-lg">讓我們開始吧！</a>
+            </div>
         </div>
     </section>
 
     <section id="about" class="section-padding">
-        <h2>關於我</h2>
-        <p class="section-desc">我是一名充滿熱情的開發者，喜歡學習新技術並解決複雜的問題。這裡可以放一段簡短的自我介紹，展現你的專業與個性。</p>
-    </section>
-
-    <section id="projects" class="section-padding bg-light">
-        <h2>作品集</h2>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-img" style="background-color: #ff7675;"></div>
-                <div class="card-content">
-                    <h3>專案名稱一</h3>
-                    <p>這是一個使用 JavaScript 和 API 打造的網頁應用程式。</p>
-                </div>
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>網站選單ヾ(≧▽≦*)o</h2>
+                <p>Website menu</p>
             </div>
-            <div class="card">
-                <div class="card-img" style="background-color: #74b9ff;"></div>
-                <div class="card-content">
-                    <h3>專案名稱二</h3>
-                    <p>響應式企業形象網站，注重使用者體驗與動畫細節。</p>
+            <div class="menu-container">
+                <div class="menu-item-card solid-shadow">
+                    <div class="icon theme-icon"></div>
+                    <h3>主題介紹</h3>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-img" style="background-color: #55efc4;"></div>
-                <div class="card-content">
-                    <h3>專案名稱三</h3>
-                    <p>結合第三方 API 服務的資料視覺化儀表板。</p>
+                <div class="menu-item-card solid-shadow">
+                    <div class="icon disk-icon"></div>
+                    <h3>音樂花園</h3>
+                </div>
+                <div class="menu-item-card solid-shadow">
+                    <div class="icon camera-icon"></div>
+                    <h3>作品集</h3>
+                </div>
+                <div class="menu-item-card solid-shadow">
+                    <div class="icon gal-icon"></div>
+                    <h3>(Gal) 不單純的夏日</h3>
+                </div>
+                <div class="menu-item-card solid-shadow">
+                    <div class="icon cal-icon"></div>
+                    <h3>TR</h3>
+                </div>
+                <div class="menu-item-card solid-shadow">
+                    <div class="icon chat-icon"></div>
+                    <h3>留言小卡</h3>
+                </div>
+                <div class="menu-item-card solid-shadow">
+                    <div class="icon folder-icon"></div>
+                    <h3>小檔案</h3>
+                </div>
+                <div class="menu-item-card solid-shadow">
+                    <div class="icon book-icon"></div>
+                    <h3>關於</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section-padding">
-        <h2>聯絡我</h2>
-        <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
-            <input type="text" name="name" placeholder="您的姓名" required>
-            <input type="email" name="email" placeholder="您的 Email" required>
-            <textarea name="message" rows="5" placeholder="請輸入您的訊息..." required></textarea>
-            <button type="submit" class="btn">送出訊息</button>
-        </form>
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>作品集展示</h2>
+                <p>這裡是我的全端專案項目</p>
+            </div>
+            <div class="project-container" id="project-list">
+                <div class="text-center w-100">作品正在加載中...</div>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 MyPortfolio. All Rights Reserved.</p>
+        <div class="container text-center">
+            <p>&copy; 2021~2026 我的小花園. 此網站為非商業用途。</p>
+            <p>為獲得最佳體驗，您的螢幕解析度需 &ge; 1600*900<br>
+            系統: Chrome 70、IE10以上</p>
+            <button class="contact-floating-btn btn btn-dark">聯絡我們！</button>
+        </div>
     </footer>
 
     <script src="script.js"></script>
