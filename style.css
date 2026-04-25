@@ -1,0 +1,245 @@
+:root {
+    --bg-color: #f4f6f8; /* 實心淺灰背景 */
+    --card-bg: #ffffff;  /* 實心純白卡片 */
+    --accent-color: #2c3e50;
+    --text-color: #333333;
+    
+    /* 邊角圓化一點點就好 */
+    --radius: 6px; 
+    
+    /* 僅有實體陰影，無光暈 */
+    --base-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); 
+    --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color); /* 實心背景 */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.text-center { text-align: center; }
+
+/* 實心卡片與陰影設定 */
+.solid-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--base-shadow);
+}
+
+/* 1. 導覽列 */
+header.solid-header {
+    background-color: var(--card-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 導覽列輕微陰影 */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo, .nav-links a, .login-btn {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.logo { font-size: 1.5rem; }
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links a:hover { color: #3498db; }
+
+/* 2. 首頁 */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; 
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.hero-text-card {
+    padding: 3rem 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-text-card h2 { font-size: 2rem; margin-bottom: 1rem; }
+.hero-text-card p { font-size: 1.1rem; color: #555; margin-bottom: 0.5rem; }
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius); /* 統一使用微圓角 */
+    margin-top: 1rem;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover { background-color: #1a252f; }
+.btn:active { transform: translateY(2px); /* 點擊壓下感 */ }
+
+.hero-tools { width: 100%; display: flex; justify-content: center; }
+
+.date-picker {
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.scroll-down {
+    text-decoration: none;
+    color: var(--accent-color);
+    margin-top: 15px;
+}
+
+.scroll-down .arrow {
+    display: block;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-8px);}
+    60% {transform: translateY(-4px);}
+}
+
+/* 3. 選單區塊 */
+.menu-section { padding: 5rem 0 8rem 0; }
+.section-header { margin-bottom: 3rem; }
+.section-header h2 { font-size: 2rem; color: var(--accent-color); }
+.section-header p { color: #666; }
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-item-card {
+    width: calc(25% - 15px);
+    padding: 2.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-4px); /* 游標滑過實體浮起 */
+    box-shadow: var(--hover-shadow); /* 陰影加深 */
+}
+
+.icon-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: #e2e6ea; /* 實心灰底代替半透明 */
+    border-radius: var(--radius);
+    margin-bottom: 1.2rem;
+}
+
+/* 4. 頁尾 */
+footer.solid-footer { 
+    background-color: var(--card-bg);
+    padding: 3rem 0; 
+    border-top: 1px solid #ddd; /* 實線分隔 */
+}
+footer p { color: #666; font-size: 0.9rem; margin-bottom: 0.5rem; }
+
+.contact-floating-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ================================ */
+/* 點擊炸裂彩色星星~~ */
+/* ================================ */
+.click-star {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    font-size: 20px;
+    will-change: transform, opacity;
+    animation: star-fade 0.8s ease-out forwards;
+    user-select: none;
+}
+
+@keyframes star-fade {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--tx), var(--ty)) scale(0) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+/* ================================ */
+/* RWD 響應式網頁設計 */
+/* ================================ */
+@media (max-width: 992px) {
+    .menu-item-card { width: calc(33.333% - 15px); }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-text-card h2 { font-size: 1.6rem; }
+    .menu-item-card { width: calc(50% - 15px); }
+}
+
+@media (max-width: 480px) {
+    .menu-item-card { width: 100%; }
+}
